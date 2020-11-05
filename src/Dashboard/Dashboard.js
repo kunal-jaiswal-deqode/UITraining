@@ -3,10 +3,9 @@ import SideBar from "./SideBar";
 import styles from "./styles.module.css";
 const DashBoard = () => {
   return (
-    <>
-      {/* <div className={styles.sideBarContainer   }>
-        <SideBar />
-      </div> */}
+    <div className={styles.container}>
+      <SideBar />
+
       <div className={styles.contentContainer}>
         <div className={styles.row}>
           <div id="largeDiv1" className={styles.largeDiv}></div>
@@ -23,7 +22,7 @@ const DashBoard = () => {
           <div id="largestDiv1" className={styles.largestDiv}></div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default DashBoard;

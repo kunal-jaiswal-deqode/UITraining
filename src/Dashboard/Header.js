@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 const Header = () => {
   return (
     <>
-      <header>UI Training</header>
+      <header className={styles.header}>UI Training</header>
     </>
   );
 };

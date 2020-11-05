@@ -25,6 +25,7 @@
 body {
   background-color: #e7e7e7;
 }
+
 header {
   position: fixed;
   width: 100%;
@@ -41,7 +42,6 @@ div {
 
 .container {
   display: flex;
-
   width: 100vw;
   height: 100vh;
 }
