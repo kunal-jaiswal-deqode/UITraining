@@ -1,0 +1,65 @@
+.row {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-evenly;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  background-color: #e7e7e7;
+}
+
+.smallDiv {
+  width: 20.5%;
+  height: 10vh;
+}
+
+.largeDiv {
+  width: 28.33%;
+  height: 40vh;
+}
+
+.largestDiv {
+  width: 93%;
+  height: 25vh;
+}
+
+body {
+  background-color: #e7e7e7;
+}
+header {
+  position: fixed;
+  width: 100%;
+  background-color: #383737;
+  font-size: 40px;
+  color: white;
+  z-index: 1;
+  padding: 10px 0px 10px 80px;
+}
+
+div {
+  background-color: white;
+}
+
+.container {
+  display: flex;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.sideBar {
+  width: 15%;
+  height: 100%;
+}
+
+.contentContainer {
+  display: block;
+  width: 85%;
+  margin: 20px;
+  padding-top: 50px;
+}
+
+.sideBarContainer {
+  display: flex;
+  width: 15%;
+  height: 100vh;
+}
