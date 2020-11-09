@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from "recharts";
-import styles from "../BarGraph/styles.module.css";
+import styles from "../styles.module.css";
 
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 
@@ -11,19 +11,15 @@ const PieChartComponent = ({ data }) => {
     setActiveIndex(index);
   };
   const renderActiveShape = (props) => {
-    const RADIAN = Math.PI / 180;
     const {
       cx,
       cy,
-      midAngle,
       innerRadius,
       outerRadius,
       startAngle,
       endAngle,
       fill,
       payload,
-      percent,
-      value,
     } = props;
 
     return (
@@ -58,15 +54,19 @@ const PieChartComponent = ({ data }) => {
   };
   return (
     <>
-      <div className={styles.heading}>Statistics</div>
+      <div className={styles.heading}>Lifetime Sales</div>
       <div className={styles.textContainer}>
         <div className={styles.infoContainer}>
-          <div className={styles.statistics}>1,284</div>
+          <div className={styles.statistics}>3,487</div>
           <div className={styles.subHeading}>Total Sales</div>
         </div>
         <div className={styles.infoContainer}>
-          <div className={styles.statistics}>7,841</div>
+          <div className={styles.statistics}>814</div>
           <div className={styles.subHeading}>Open Campaign</div>
+        </div>
+        <div className={styles.infoContainer}>
+          <div className={styles.statistics}>5,324</div>
+          <div className={styles.subHeading}>Daily Campaign</div>
         </div>
       </div>
       <ResponsiveContainer width="95%" height={300}>

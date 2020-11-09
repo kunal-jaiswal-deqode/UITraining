@@ -4,12 +4,10 @@ import {
   Bar,
   XAxis,
   YAxis,
-  CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
 } from "recharts";
-import styles from "./styles.module.css";
+import styles from "../styles.module.css";
 
 const BarGraph = ({ data }) => {
   return (
