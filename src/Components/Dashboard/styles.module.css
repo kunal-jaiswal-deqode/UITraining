@@ -1,10 +1,19 @@
+.heading {
+  font-size: 1.3rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #313131;
+  background-color: #f5f7fb;
+  font-weight: 500;
+  padding-left: 40px;
+}
+
 .row {
   width: 100%;
-  display: inline-flex;
+  display: flex;
   justify-content: space-evenly;
   padding-top: 30px;
   padding-bottom: 40px;
-  background-color: #e7e7e7;
+  background-color: #f5f7fb;
 }
 
 .smallDiv {
@@ -14,26 +23,18 @@
 
 .largeDiv {
   width: 28.33%;
-  height: 40vh;
+
+  height: 450px;
+  padding: 15px;
 }
 
 .largestDiv {
   width: 93%;
-  height: 25vh;
+  height: fit-content;
 }
 
 body {
   background-color: #e7e7e7;
-}
-
-header {
-  position: fixed;
-  width: 100%;
-  background-color: #383737;
-  font-size: 40px;
-  color: white;
-  z-index: 1;
-  padding: 10px 0px 10px 80px;
 }
 
 div {
@@ -47,19 +48,19 @@ div {
 }
 
 .sideBar {
-  width: 15%;
+  width: 10%;
   height: 100%;
 }
 
 .contentContainer {
   display: block;
-  width: 85%;
+  width: 90%;
   margin: 20px;
   padding-top: 50px;
 }
 
 .sideBarContainer {
   display: flex;
-  width: 15%;
+  width: 10%;
   height: 100vh;
 }
