@@ -79,3 +79,47 @@ export const lineChartData = [
     amt: 2100,
   },
 ];
+
+export const tableData = [
+  {
+    projectName: "App design and development",
+    startDate: "Jan 03, 2020",
+    dueDate: "Oct 12, 2021",
+    team: "Images to insert",
+    status: "Work in Progress",
+    client: "Halette Boivin",
+  },
+  {
+    projectName: "Coffee detail page - Main Page",
+    startDate: "Sep 21, 2016",
+    dueDate: "Oct 12, 2021",
+    team: "Images to insert",
+    status: "Completed",
+    client: "Lucas Sabourin",
+  },
+  {
+    projectName: "Poster illustation design",
+    startDate: "Jan 03, 2020",
+    dueDate: "Sep 21, 2016",
+    team: "Images to insert",
+    status: "Pending",
+    client: "Darren Sammy",
+  },
+  {
+    projectName: "Landing page design - Home",
+    startDate: "Coming Soon",
+    dueDate: "May 25, 2021",
+    team: "Images to insert",
+    status: "Coming Soon",
+    client: "Karel Auberjo",
+  },
+  {
+    projectName: "Drinking bottle graphics	",
+    startDate: "Jan 03, 2020",
+    dueDate: "Oct 12, 2021",
+    team: "Images to insert",
+    status: "Work in Progress",
+    client: "Halette Boivin",
+  },
+  {},
+];

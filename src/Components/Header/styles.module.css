@@ -1,9 +1,11 @@
 header {
   position: fixed;
   width: 100%;
-  background-color: #383737;
-  font-size: 40px;
+  font-family: sans-serif;
+  background-color: #38414a;
+  font-size: 24px;
+  padding: 16px 0px 16px 80px;
   color: white;
   z-index: 1;
-  padding: 10px 0px 10px 80px;
+  top: 0;
 }

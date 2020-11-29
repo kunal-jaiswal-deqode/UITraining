@@ -4,8 +4,10 @@ import styles from "./styles.module.css";
 import BarGraph from "./Graph/BarGraph/BarGraph";
 import PieChartComponent from "./Graph/PieChart/PieChartComponent";
 import LineChartComponent from "./Graph/LineChart/LineChart";
+import DataTable from "./DataTable/DataTable";
 import { barGraphData, pieChartData } from "./constants";
 import Profile from "./Profile/Profile";
+import cx from "classnames";
 
 const DashBoard = () => {
   return (
@@ -43,7 +45,19 @@ const DashBoard = () => {
           </div>
         </div>
         <div className={styles.row}>
-          <div id="largestDiv1" className={styles.largestDiv}></div>
+          <div id="largestDiv1" className={styles.largestDiv}>
+            <DataTable />
+          </div>
+        </div>
+        <div className={styles.row}>
+          <div className={styles.footerContainer}>
+            <span>2015 - 2020 © UBold theme by Coderthemes</span>
+            <span>
+              <span className={styles.footerContent}>About us</span>
+              <span className={styles.footerContent}>Help</span>
+              <span className={styles.footerContent}>Support</span>
+            </span>
+          </div>
         </div>
       </div>
     </div>
