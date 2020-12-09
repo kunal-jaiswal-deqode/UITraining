@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/UITraining/static/css/main.7cf49cab.chunk.css",
-    "main.js": "/UITraining/static/js/main.c4ca3a4f.chunk.js",
-    "main.js.map": "/UITraining/static/js/main.c4ca3a4f.chunk.js.map",
+    "main.css": "/UITraining/static/css/main.20e169ef.chunk.css",
+    "main.js": "/UITraining/static/js/main.49ef6801.chunk.js",
+    "main.js.map": "/UITraining/static/js/main.49ef6801.chunk.js.map",
     "runtime-main.js": "/UITraining/static/js/runtime-main.3b8c7257.js",
     "runtime-main.js.map": "/UITraining/static/js/runtime-main.3b8c7257.js.map",
-    "static/js/2.ea63deb1.chunk.js": "/UITraining/static/js/2.ea63deb1.chunk.js",
-    "static/js/2.ea63deb1.chunk.js.map": "/UITraining/static/js/2.ea63deb1.chunk.js.map",
+    "static/js/2.d70fa384.chunk.js": "/UITraining/static/js/2.d70fa384.chunk.js",
+    "static/js/2.d70fa384.chunk.js.map": "/UITraining/static/js/2.d70fa384.chunk.js.map",
     "index.html": "/UITraining/index.html",
-    "static/css/main.7cf49cab.chunk.css.map": "/UITraining/static/css/main.7cf49cab.chunk.css.map",
-    "static/js/2.ea63deb1.chunk.js.LICENSE.txt": "/UITraining/static/js/2.ea63deb1.chunk.js.LICENSE.txt"
+    "static/css/main.20e169ef.chunk.css.map": "/UITraining/static/css/main.20e169ef.chunk.css.map",
+    "static/js/2.d70fa384.chunk.js.LICENSE.txt": "/UITraining/static/js/2.d70fa384.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3b8c7257.js",
-    "static/js/2.ea63deb1.chunk.js",
-    "static/css/main.7cf49cab.chunk.css",
-    "static/js/main.c4ca3a4f.chunk.js"
+    "static/js/2.d70fa384.chunk.js",
+    "static/css/main.20e169ef.chunk.css",
+    "static/js/main.49ef6801.chunk.js"
   ]
 }
