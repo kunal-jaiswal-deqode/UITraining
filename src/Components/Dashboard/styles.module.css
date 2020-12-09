@@ -1,6 +1,5 @@
 .heading {
   font-size: 1.3rem;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: #313131;
   background-color: #f5f7fb;
   font-weight: 500;
@@ -20,21 +19,25 @@
 .smallDiv {
   width: 20.5%;
   height: 10vh;
+  border-radius: 8px;
 }
 
 .largeDiv {
   width: 28.33%;
   height: 450px;
   padding: 15px;
+  border-radius: 8px;
 }
 
 .largestDiv {
   width: 93%;
   height: fit-content;
+  border-radius: 8px;
 }
 
 body {
   background-color: #f5f7fb;
+  font-family: Rubik, sans-serif;
 }
 
 div {
@@ -69,7 +72,6 @@ div {
   display: flex;
   justify-content: space-between;
   padding: 24px 0px 24px 24px;
-  font-family: sans-serif;
   width: 92%;
   color: #98a6ad;
   font-size: 0.84rem;

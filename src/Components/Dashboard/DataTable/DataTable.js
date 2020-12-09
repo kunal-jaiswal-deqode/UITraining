@@ -7,19 +7,15 @@ const DataTable = () => {
   return (
     <div className={styles.tableContainer}>
       <label className={styles.heading}>Projects</label>
-      <table className={styles.headerTable}>
-        <thead className={styles.tableHeader}>
-          <th className={cx(styles.header, styles.projectName)}>
-            Project Name
-          </th>
-          <th className={cx(styles.header, styles.startDate)}> Start Date</th>
-          <th className={cx(styles.header, styles.dueDate)}>Due Date</th>
-          <th className={cx(styles.header, styles.team)}>Team</th>
-          <th className={cx(styles.header, styles.status)}>Status</th>
-          <th className={cx(styles.header, styles.client)}>Client</th>
-        </thead>
-      </table>
+      <table className={styles.headerTable}></table>
       <table className={styles.contentTable}>
+        <th className={cx(styles.header, styles.projectName)}>Project Name</th>
+        <th className={cx(styles.header, styles.startDate)}> Start Date</th>
+        <th className={cx(styles.header, styles.dueDate)}>Due Date</th>
+        <th className={cx(styles.header, styles.team)}>Team</th>
+        <th className={cx(styles.header, styles.status)}>Status</th>
+        <th className={cx(styles.header, styles.client)}>Client</th>
+
         <tbody>
           {tableData.map((tableEntry) => (
             <tr key={tableEntry.projectName}>
