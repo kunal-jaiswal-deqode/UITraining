@@ -61,3 +61,21 @@
   width: 20%;
   text-align: left;
 }
+
+.imageGroup {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  float: left;
+}
+.imageGroup > img {
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+
+.imageGroup > img:nth-child(n) {
+  margin-left: -10px;
+}
