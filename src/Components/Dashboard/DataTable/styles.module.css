@@ -37,30 +37,27 @@
 .projectName {
   width: 25%;
   padding: 8px 0px;
-  text-align: center;
+  text-align: left;
+  padding-left: 8px;
 }
 .startDate {
   width: 12%;
 
-  text-align: center;
+  text-align: left;
 }
 .dueDate {
   width: 12%;
-
-  text-align: center;
+  text-align: left;
 }
 .team {
   width: 12%;
-
-  text-align: center;
+  text-align: left;
 }
 .status {
   width: 19%;
-
-  text-align: center;
+  text-align: left;
 }
 .client {
   width: 20%;
-
-  text-align: center;
+  text-align: left;
 }
