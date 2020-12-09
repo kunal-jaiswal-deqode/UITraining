@@ -1,12 +1,20 @@
 import React from "react";
 import styles from "./styles.module.css";
+import cx from "classnames";
 
 const imageUrl =
   "https://cdn2.iconfinder.com/data/icons/avatars-2-7/128/1-512.png";
-const Profile = ({ name, designation }) => {
+const Profile = ({ name, designation, isActive }) => {
   return (
-    <div className={styles.profileContainer}>
+    <div
+      className={cx(
+        { [styles.profileContainer]: isActive },
+        { [styles.profileActive]: isActive },
+        { [styles.profileContainer]: !isActive }
+      )}
+    >
       <div className={styles.imageContainer}>
+        {isActive && <span className={styles.isActiveDot} />}
         <img src={imageUrl} alt="ProfileImage" className={styles.image} />
       </div>
       <div className={styles.infoContainer}>

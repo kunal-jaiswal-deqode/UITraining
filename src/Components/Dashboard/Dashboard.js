@@ -32,16 +32,32 @@ const DashBoard = () => {
         </div>
         <div className={styles.row}>
           <div id="smallDiv1" className={styles.smallDiv}>
-            <Profile name="Thelma Fridley" designation="Admin User" />
+            <Profile
+              name="Thelma Fridley"
+              designation="Admin User"
+              isActive={false}
+            />
           </div>
           <div id="smallDiv2" className={styles.smallDiv}>
-            <Profile name="Chandler Hervieux" designation="Manager" />
+            <Profile
+              name="Chandler Hervieux"
+              designation="Manager"
+              isActive={false}
+            />
           </div>
           <div id="smallDiv3" className={styles.smallDiv}>
-            <Profile name="Percy Demers" designation="Director" />
+            <Profile
+              name="Percy Demers"
+              designation="Director"
+              isActive={false}
+            />
           </div>
           <div id="smallDiv4" className={styles.smallDiv}>
-            <Profile name="Antoine Masson" designation="Premium User" />
+            <Profile
+              name="Antoine Masson"
+              designation="Premium User"
+              isActive={true}
+            />
           </div>
         </div>
         <div className={styles.row}>
