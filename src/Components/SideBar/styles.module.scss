@@ -1,9 +1,29 @@
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d6db;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a4a8ac;
+  border-radius: 6px;
+}
+
 .sideBar {
   position: fixed;
   bottom: 0;
   width: 300px;
   height: calc(100vh - 60px);
   background-color: #f5f7fb;
+  border-radius: 8px;
 }
 
 .sideBarWrapper {
@@ -14,7 +34,12 @@
   margin-top: 30px;
   margin-left: 36px;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
+  border-radius: 8px;
+
+  &:hover {
+    overflow-y: overlay;
+  }
 }
 
 .profileWrapper {
@@ -22,6 +47,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 8px;
 }
 .profileImage {
   width: 60px;
@@ -51,6 +77,7 @@
   color: #757d94;
   text-transform: uppercase;
   font-size: 12px;
+  margin-top: 12px;
 }
 
 .contentContainer {
@@ -73,7 +100,7 @@
   justify-content: space-between;
 }
 .dashBoard {
-  padding: 8px 24px;
+  padding: 8px 32px;
   color: #6e768e;
   width: 100%;
   transition: all 0.4s;
@@ -89,21 +116,75 @@
 }
 
 .dashboardHeading {
-  padding-left: 8px;
+  padding-left: 16px;
   padding-top: 2px;
 }
 
 .dashBoardCount {
   color: white;
   background-color: #11ca6d;
-  width: 24px;
+  padding: 0 6px;
+  font-size: 75%;
   border-radius: 8px;
-  display: flex;
-  align-self: center;
-  justify-content: center;
 }
 
 .displayFlex {
   display: flex;
   align-items: center;
+}
+
+.optionWrapper {
+  padding-top: 24px;
+}
+
+.optionContainer {
+  padding: 8px 0px;
+  width: 100%;
+  transition: all 0.4s;
+  font-size: 14.2px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #6e768e;
+
+  cursor: pointer;
+
+  &:hover {
+    color: #4a81d4;
+  }
+  &:active {
+    color: #4a81d4;
+  }
+}
+
+.arrowIcon {
+  padding-right: 6px;
+}
+
+.hot1 {
+  color: white;
+  background-color: #ed71a7;
+  padding: 1px 6px;
+  font-size: 75%;
+  border-radius: 2px;
+  font-weight: bold;
+}
+.hot2 {
+  color: white;
+  background-color: #47bfe5;
+  padding: 1px 6px;
+  font-size: 75%;
+  border-radius: 2px;
+  font-weight: bold;
+}
+.new {
+  color: white;
+  background-color: #4a81d4;
+  padding: 1px 6px;
+  font-size: 75%;
+  border-radius: 2px;
+  font-weight: bold;
 }
