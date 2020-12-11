@@ -1,15 +1,22 @@
-import React, { useState } from "react";
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from "recharts";
-import styles from "../styles.module.css";
+import React, { useEffect, useState } from "react";
+import {
+  PieChart,
+  Pie,
+  Sector,
+  Cell,
+  ResponsiveContainer,
+  Tooltip,
+} from "recharts";
+import styles from "../styles.module.scss";
 
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 
 const PieChartComponent = ({ data }) => {
-  const [activeIndex, setActiveIndex] = useState(-1);
+  const [activeIndex, setActiveIndex] = useState(0);
   const onPieEnter = (data, index) => {
-    console.log(data, index);
     setActiveIndex(index);
   };
+
   const renderActiveShape = (props) => {
     const {
       cx,
@@ -89,6 +96,7 @@ const PieChartComponent = ({ data }) => {
               />
             ))}
           </Pie>
+          <Tooltip />
         </PieChart>
       </ResponsiveContainer>
     </>

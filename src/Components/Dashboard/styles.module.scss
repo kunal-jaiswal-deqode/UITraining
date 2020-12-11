@@ -50,22 +50,13 @@ div {
   height: fit-content;
 }
 
-.sideBar {
-  width: 10%;
-  height: 100%;
-}
-
 .contentContainer {
   display: block;
-  width: 90%;
+  position: absolute;
+  right: 0;
+  width: calc(100% - 300px);
   margin-top: 20px;
   padding-top: 30px;
-}
-
-.sideBarContainer {
-  display: flex;
-  width: 10%;
-  height: 100vh;
 }
 
 .footerContainer {

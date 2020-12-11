@@ -1,0 +1,109 @@
+.sideBar {
+  position: fixed;
+  bottom: 0;
+  width: 300px;
+  height: calc(100vh - 60px);
+  background-color: #f5f7fb;
+}
+
+.sideBarWrapper {
+  position: relative;
+  background-color: white;
+  width: calc(300px - 36px);
+  height: calc(100% - 60px);
+  margin-top: 30px;
+  margin-left: 36px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.profileWrapper {
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profileImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 16px;
+}
+.profileName {
+  font-size: 15px;
+  font-weight: normal;
+  color: #323a43;
+  padding-top: 8px;
+  cursor: pointer;
+  &:hover {
+    color: #121519;
+  }
+}
+
+.profileDesignation {
+  font-size: 13px;
+  color: #98a6ad;
+  padding-top: 6px;
+}
+
+.label {
+  color: #757d94;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.contentContainer {
+  padding: 24px 24px 0 24px;
+}
+.dashBoardContainer {
+  padding-top: 12px;
+}
+
+.dashBoardHeader {
+  padding: 8px 0px;
+
+  width: 100%;
+  transition: all 0.4s;
+  font-size: 14.2px;
+  cursor: pointer;
+  color: #4a81d4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dashBoard {
+  padding: 8px 24px;
+  color: #6e768e;
+  width: 100%;
+  transition: all 0.4s;
+  font-size: 13.5px;
+  cursor: pointer;
+
+  &:hover {
+    color: #4a81d4;
+  }
+  &:active {
+    color: #4a81d4;
+  }
+}
+
+.dashboardHeading {
+  padding-left: 8px;
+  padding-top: 2px;
+}
+
+.dashBoardCount {
+  color: white;
+  background-color: #11ca6d;
+  width: 24px;
+  border-radius: 8px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+.displayFlex {
+  display: flex;
+  align-items: center;
+}

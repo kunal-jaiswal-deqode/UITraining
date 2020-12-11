@@ -7,7 +7,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import styles from "../styles.module.css";
+import styles from "../styles.module.scss";
 
 const BarGraph = ({ data }) => {
   return (
