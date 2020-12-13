@@ -1,0 +1,123 @@
+::placeholder {
+  color: #a4a9ad;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #a4a9ad;
+}
+
+::-ms-input-placeholder {
+  color: #a4a9ad;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  left: 0;
+  position: fixed;
+  width: 100%;
+
+  background-color: #38414a;
+  font-size: 24px;
+  padding: 22px 0px 18px 100px;
+  color: white;
+  z-index: 1;
+  top: 0;
+}
+.menuContainer {
+  display: flex;
+  background-color: inherit;
+}
+
+.logoImage {
+  height: 20px;
+}
+
+.menu {
+  margin-left: 142px;
+  cursor: pointer;
+}
+
+.dropMenu {
+  display: flex;
+  align-items: center;
+  background-color: inherit;
+  font-size: 13px;
+  color: #a4a9ad;
+  margin-left: 28px;
+  cursor: pointer;
+}
+
+.downArraow {
+  padding-top: 1px;
+  padding-left: 4px;
+  cursor: pointer;
+}
+
+.optionContainer {
+  background-color: inherit;
+  padding-right: 160px;
+  display: flex;
+  align-items: center;
+}
+
+.inputContainer {
+  background-color: #464f57;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 8px 16px;
+  border-radius: 16px;
+  margin-right: 24px;
+}
+
+.input {
+  width: 150px;
+
+  background-color: inherit;
+  color: #fff;
+  outline: none;
+  border: none;
+  &:active {
+    outline: none;
+  }
+}
+
+.searchIcon {
+  color: #a4a9ad;
+  cursor: pointer;
+}
+
+.flag {
+  width: 30px;
+  margin-right: 24px;
+  cursor: pointer;
+}
+
+.profileContainer {
+  display: flex;
+  align-items: center;
+  background-color: inherit;
+  font-size: 13px;
+  color: #a4a9ad;
+  margin-right: 24px;
+}
+
+.profileImage {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.profileName {
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.marginRight {
+  margin-right: 24px;
+  cursor: pointer;
+}
