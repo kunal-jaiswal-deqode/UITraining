@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.scss";
-
+import cx from "classnames";
 import {
   Airplay,
   Calendar,
@@ -28,9 +28,16 @@ import {
   Map,
   Share2,
   ChevronRight,
+  ChevronDown,
 } from "react-feather";
 
 const SideBar = () => {
+  const [isSelectedEcom, setIsSelectedEcom] = useState(false);
+  const [isSelectedCrm, setIsSelectedCrm] = useState(false);
+  const [isSelectedEmail, setIsSelectedEmail] = useState(false);
+  const [isSelectedProject, setIsSelectedProject] = useState(false);
+  const [isSelectedTask, setIsSelectedTask] = useState(false);
+
   const imageUrl =
     "https://cdn2.iconfinder.com/data/icons/avatars-2-7/128/1-512.png";
   return (
@@ -81,33 +88,110 @@ const SideBar = () => {
             </div>
 
             <div className={styles.dashBoardContainer}>
-              <div className={styles.optionContainer}>
+              <div
+                className={cx(
+                  { [styles.optionContainer]: !isSelectedEcom },
+                  { [styles.optionContainer]: isSelectedEcom },
+                  { [styles.activeOptionContainer]: isSelectedEcom }
+                )}
+                onClick={() => {
+                  setIsSelectedEcom(!isSelectedEcom);
+                }}
+              >
                 <div className={styles.displayFlex}>
                   <ShoppingCart size={16} />
                   <span className={styles.dashboardHeading}>E-Commerce</span>
                 </div>
-                <ChevronRight size={15} className={styles.arrowIcon} />
+                {!isSelectedEcom ? (
+                  <ChevronRight size={15} className={styles.arrowIcon} />
+                ) : (
+                  <ChevronDown size={15} className={styles.arrowIcon} />
+                )}
               </div>
+              {
+                <div
+                  className={styles.collapsibleOptionContainer}
+                  style={{ display: isSelectedEcom ? "block" : "none" }}
+                >
+                  <div className={styles.collapsibleOption}>Dashboard</div>
+                  <div className={styles.collapsibleOption}>Product</div>
+                  <div className={styles.collapsibleOption}>
+                    Product details
+                  </div>
+                  <div className={styles.collapsibleOption}>Add product</div>
+                  <div className={styles.collapsibleOption}>Order details</div>
+                  <div className={styles.collapsibleOption}>Orders</div>
+                  <div className={styles.collapsibleOption}>Customer</div>
+                  <div className={styles.collapsibleOption}>Sellers</div>
+                  <div className={styles.collapsibleOption}>Shopping cart</div>
+                  <div className={styles.collapsibleOption}>Checkout</div>
+                </div>
+              }
             </div>
 
             <div className={styles.dashBoardContainer}>
-              <div className={styles.optionContainer}>
+              <div
+                className={cx(
+                  { [styles.optionContainer]: !isSelectedCrm },
+                  { [styles.optionContainer]: isSelectedCrm },
+                  { [styles.activeOptionContainer]: isSelectedCrm }
+                )}
+                onClick={() => {
+                  setIsSelectedCrm(!isSelectedCrm);
+                }}
+              >
                 <div className={styles.displayFlex}>
                   <Users size={16} />
                   <span className={styles.dashboardHeading}>CRM</span>
                 </div>
-                <ChevronRight size={15} className={styles.arrowIcon} />
+                {!isSelectedCrm ? (
+                  <ChevronRight size={15} className={styles.arrowIcon} />
+                ) : (
+                  <ChevronDown size={15} className={styles.arrowIcon} />
+                )}
               </div>
+              {isSelectedCrm && (
+                <div className={styles.collapsibleOptionContainer}>
+                  <div className={styles.collapsibleOption}>Dashboard</div>
+                  <div className={styles.collapsibleOption}>Contact</div>
+                  <div className={styles.collapsibleOption}>Leads</div>
+                  <div className={styles.collapsibleOption}>Opportunities</div>
+                  <div className={styles.collapsibleOption}>Customer</div>
+                </div>
+              )}
             </div>
 
             <div className={styles.dashBoardContainer}>
-              <div className={styles.optionContainer}>
+              <div
+                className={cx(
+                  { [styles.optionContainer]: !isSelectedEmail },
+                  { [styles.optionContainer]: isSelectedEmail },
+                  { [styles.activeOptionContainer]: isSelectedEmail }
+                )}
+                onClick={() => {
+                  setIsSelectedEmail(!isSelectedEmail);
+                }}
+              >
                 <div className={styles.displayFlex}>
                   <Mail size={16} />
                   <span className={styles.dashboardHeading}>E-mail</span>
                 </div>
-                <ChevronRight size={15} className={styles.arrowIcon} />
+                {!isSelectedEmail ? (
+                  <ChevronRight size={15} className={styles.arrowIcon} />
+                ) : (
+                  <ChevronDown size={15} className={styles.arrowIcon} />
+                )}
               </div>
+              {isSelectedEmail && (
+                <div className={styles.collapsibleOptionContainer}>
+                  <div className={styles.collapsibleOption}>Inbox</div>
+                  <div className={styles.collapsibleOption}>Read email</div>
+                  <div className={styles.collapsibleOption}>Compose email</div>
+                  <div className={styles.collapsibleOption}>
+                    Email templates
+                  </div>
+                </div>
+              )}
             </div>
 
             <div className={styles.dashBoardContainer}>
@@ -130,13 +214,36 @@ const SideBar = () => {
             </div>
 
             <div className={styles.dashBoardContainer}>
-              <div className={styles.optionContainer}>
+              <div
+                className={cx(
+                  { [styles.optionContainer]: !isSelectedProject },
+                  { [styles.optionContainer]: isSelectedProject },
+                  { [styles.activeOptionContainer]: isSelectedProject }
+                )}
+                onClick={() => {
+                  setIsSelectedProject(!isSelectedProject);
+                }}
+              >
                 <div className={styles.displayFlex}>
                   <Briefcase size={16} />
                   <span className={styles.dashboardHeading}>Projects</span>
                 </div>
-                <ChevronRight size={15} className={styles.arrowIcon} />
+                {!isSelectedProject ? (
+                  <ChevronRight size={15} className={styles.arrowIcon} />
+                ) : (
+                  <ChevronDown size={15} className={styles.arrowIcon} />
+                )}
               </div>
+              {isSelectedProject && (
+                <div className={styles.collapsibleOptionContainer}>
+                  <div className={styles.collapsibleOption}>List</div>
+                  <div className={styles.collapsibleOption}>Details</div>
+                  <div className={styles.collapsibleOption}>
+                    Create Projects
+                  </div>
+                  <div className={styles.collapsibleOption}>Add product</div>
+                </div>
+              )}
             </div>
 
             <div className={styles.dashBoardContainer}>

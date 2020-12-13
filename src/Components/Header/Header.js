@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import {
   Menu,
@@ -8,6 +8,7 @@ import {
   Grid,
   Bell,
   Settings,
+  Minimize,
 } from "react-feather";
 
 const Header = () => {
@@ -17,6 +18,30 @@ const Header = () => {
     "https://coderthemes.com/ubold/layouts/assets/images/logo-light.png";
   const flag =
     "https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg";
+
+  const [isFullScreen, setIsFullScreen] = useState(false);
+
+  const openFullScreen = () => {
+    const elem = document.getElementById("root");
+
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) {
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      elem.msRequestFullscreen();
+    }
+  };
+  const closeFullscreen = () => {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    }
+  };
+
   return (
     <>
       <header className={styles.header}>
@@ -41,7 +66,27 @@ const Header = () => {
             />
             <Search size={16} className={styles.searchIcon} />
           </div>
-          <Maximize size={22} color="#AFB3B7" className={styles.marginRight} />
+          {!isFullScreen ? (
+            <Maximize
+              size={22}
+              color="#AFB3B7"
+              className={styles.marginRight}
+              onClick={() => {
+                setIsFullScreen(true);
+                openFullScreen();
+              }}
+            />
+          ) : (
+            <Minimize
+              size={22}
+              color="#AFB3B7"
+              className={styles.marginRight}
+              onClick={() => {
+                setIsFullScreen(false);
+                closeFullscreen();
+              }}
+            />
+          )}
           <Grid size={22} color="#AFB3B7" className={styles.marginRight} />
           <img src={flag} alt="" className={styles.flag} />
           <Bell size={22} color="#AFB3B7" className={styles.marginRight} />
