@@ -65,6 +65,7 @@ div {
 }
 
 .contentContainer {
+  background-color: #f5f7fb;
   display: block;
   position: absolute;
   right: 0;
@@ -86,3 +87,30 @@ div {
 .footerContent {
   margin-right: 24px;
 }
+
+@media only screen and (max-width: 1200px) {
+  //tablet
+  .row {
+    padding-left: 50px;
+    width: 90%;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  .smallDiv {
+    margin-top: 60px;
+    width: 85%;
+  }
+  .largeDiv {
+    margin-top: 30px;
+    width: 80%;
+  }
+  .largestDiv {
+    width: 90%;
+  }
+}
+// @media only screen and (min-width: 600px) {
+//   //mobile
+//   .row {
+//     flex-direction: column;
+//   }
+// }
