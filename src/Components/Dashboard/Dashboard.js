@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SideBar from "../SideBar/SideBar";
 import styles from "./styles.module.scss";
 import BarGraph from "./Graph/BarGraph/BarGraph";
@@ -7,27 +7,87 @@ import LineChartComponent from "./Graph/LineChart/LineChart";
 import DataTable from "./DataTable/DataTable";
 import { barGraphData, pieChartData } from "./constants";
 import Profile from "./Profile/Profile";
-import cx from "classnames";
+import { Minus, X } from "react-feather";
 
-const DashBoard = () => {
+const DashBoard = ({ showSideBar, setShowSideBar }) => {
+  const [isPieChartMinimize, setIsPieChartMinimize] = useState(false);
+  const [isBarGraph, setIsBarGraph] = useState(false);
+  const [isLineChartMinimize, setIsLineChartMinimize] = useState(false);
+
   return (
     <div className={styles.container}>
-      <SideBar />
-      <div className={styles.contentContainer}>
+      <SideBar showSideBar={showSideBar} setShowSideBar={setShowSideBar} />
+      <div
+        className={styles.contentContainer}
+        style={{ width: !showSideBar ? "100%" : "calc(100% - 300px)" }}
+      >
         <div className={styles.heading}>Dashboard</div>
         <div className={styles.row}>
-          <div id="largeDiv1" className={styles.largeDiv}>
+          <div
+            id="largeDiv1"
+            className={styles.largeDiv}
+            style={{ height: isPieChartMinimize ? "30px" : "450px" }}
+          >
             <div className={styles.graph}>
-              <PieChartComponent data={pieChartData} />
+              <div className={styles.graphHeading}>
+                Lifetime Sales
+                <span>
+                  <Minus
+                    size={16}
+                    className={styles.closeIcon}
+                    onClick={() => setIsPieChartMinimize(!isPieChartMinimize)}
+                  />
+                  <X size={16} className={styles.closeIcon} />
+                </span>
+              </div>
+              <div style={{ display: isPieChartMinimize ? "none" : "block" }}>
+                <PieChartComponent data={pieChartData} />
+              </div>
             </div>
           </div>
-          <div id="largeDiv2" className={styles.largeDiv}>
+          <div
+            id="largeDiv2"
+            className={styles.largeDiv}
+            style={{ height: isBarGraph ? "30px" : "450px" }}
+          >
             <div className={styles.graph}>
-              <BarGraph data={barGraphData} />
+              <div className={styles.graphHeading}>
+                Statistics
+                <span>
+                  <Minus
+                    size={16}
+                    className={styles.closeIcon}
+                    onClick={() => {
+                      setIsBarGraph(!isBarGraph);
+                    }}
+                  />
+                  <X size={16} className={styles.closeIcon} />
+                </span>
+              </div>
+              <div style={{ display: isBarGraph ? "none" : "block" }}>
+                <BarGraph data={barGraphData} />
+              </div>
             </div>
           </div>
-          <div id="largeDiv3" className={styles.largeDiv}>
-            <LineChartComponent />
+          <div
+            id="largeDiv3"
+            className={styles.largeDiv}
+            style={{ height: isLineChartMinimize ? "30px" : "450px" }}
+          >
+            <div className={styles.graphHeading}>
+              Income Amounts
+              <span>
+                <Minus
+                  size={16}
+                  className={styles.closeIcon}
+                  onClick={() => setIsLineChartMinimize(!isLineChartMinimize)}
+                />
+                <X size={16} className={styles.closeIcon} />
+              </span>
+            </div>
+            <div style={{ display: isLineChartMinimize ? "none" : "block" }}>
+              <LineChartComponent />
+            </div>
           </div>
         </div>
         <div className={styles.row}>

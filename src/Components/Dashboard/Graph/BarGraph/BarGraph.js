@@ -12,7 +12,6 @@ import styles from "../styles.module.scss";
 const BarGraph = ({ data }) => {
   return (
     <>
-      <div className={styles.heading}>Statistics</div>
       <div className={styles.textContainer}>
         <div className={styles.infoContainer}>
           <div className={styles.statistics}>1,284</div>

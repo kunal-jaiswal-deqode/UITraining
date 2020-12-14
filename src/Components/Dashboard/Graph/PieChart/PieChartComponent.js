@@ -61,7 +61,6 @@ const PieChartComponent = ({ data }) => {
   };
   return (
     <>
-      <div className={styles.heading}>Lifetime Sales</div>
       <div className={styles.textContainer}>
         <div className={styles.infoContainer}>
           <div className={styles.statistics}>3,487</div>

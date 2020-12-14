@@ -15,7 +15,6 @@ import { lineChartData } from "../../constants";
 const LineChartComponent = () => {
   return (
     <>
-      <div className={styles.heading}>Income Amounts</div>
       <div className={styles.textContainer}>
         <div className={styles.infoContainer}>
           <div className={styles.statistics}>2,845</div>

@@ -31,17 +31,20 @@ import {
   ChevronDown,
 } from "react-feather";
 
-const SideBar = () => {
+const SideBar = ({ showSideBar, setShowSideBar }) => {
   const [isSelectedEcom, setIsSelectedEcom] = useState(false);
   const [isSelectedCrm, setIsSelectedCrm] = useState(false);
   const [isSelectedEmail, setIsSelectedEmail] = useState(false);
   const [isSelectedProject, setIsSelectedProject] = useState(false);
-  const [isSelectedTask, setIsSelectedTask] = useState(false);
 
   const imageUrl =
     "https://cdn2.iconfinder.com/data/icons/avatars-2-7/128/1-512.png";
   return (
-    <div id="sideBar" className={styles.sideBar}>
+    <div
+      id="sideBar"
+      className={styles.sideBar}
+      style={{ display: !showSideBar ? "none" : "block" }}
+    >
       <div className={styles.sideBarWrapper}>
         <div className={styles.profileWrapper}>
           <img src={imageUrl} alt="" className={styles.profileImage} />

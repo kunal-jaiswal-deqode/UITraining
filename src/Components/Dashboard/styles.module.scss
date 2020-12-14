@@ -6,6 +6,19 @@
   padding-left: 40px;
   padding-top: 30px;
 }
+.closeIcon {
+  cursor: pointer;
+  padding-left: 8px;
+}
+
+.graphHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  margin: 0px 0px 30px 15px;
+  color: rgb(59, 59, 59);
+}
 
 .row {
   width: 100%;
